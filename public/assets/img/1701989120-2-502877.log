@@ -1,0 +1,78 @@
+Agent version:	2.23.1
+Hostname:	vm-osx-ventura-norosetta-g2.4core-5afe8f71-2e02-42f0-8b42-7aab9ad2b801
+Nodename:	las1-vfw01-gen2-mmg4-10-92-231-122
+Start time:	2023-12-07T22:44:56Z
+Xcode version:	14.3
+$ bitrise "run" "--config" "/var/folders/xq/sfn_fz953jb36ptp2g68wc2r0000gn/T/bitrise-agent945057452/bitrise.yml" "--inventory" "/var/folders/xq/sfn_fz953jb36ptp2g68wc2r0000gn/T/bitrise-agent945057452/bitrise.secrets.yml" "--json-params-base64" "eyJ3b3JrZmxvdyI6InZhbGlkYXRpb25fd29ya2Zsb3dfd2l0aF9zc2gifQ=="
+
+██████╗ ██╗████████╗██████╗ ██╗███████╗███████╗
+██╔══██╗██║╚══██╔══╝██╔══██╗██║██╔════╝██╔════╝
+██████╔╝██║   ██║   ██████╔╝██║███████╗█████╗
+██╔══██╗██║   ██║   ██╔══██╗██║╚════██║██╔══╝
+██████╔╝██║   ██║   ██║  ██║██║███████║███████╗
+╚═════╝ ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+version: 2.5.0
+
+[33;1mCI mode: true
+[0m[33;1mPR mode: false
+[0m[33;1mDebug mode: false
+[0m[33;1mSecret filtering mode: true
+[0m[33;1mSecret Envs filtering mode: true
+[0m[33;1mNo output timeout mode: false
+[0m
+[34;1mRunning workflow: validation_workflow_with_ssh
+[0m
+[34;1mSwitching to workflow: validation_workflow_with_ssh
+[0mStep uses latest version, updating StepLib...
++------------------------------------------------------------------------------+
+| (0) Running project scanner                                                  |
++------------------------------------------------------------------------------+
+| id: project-scanner                                                          |
+| version: 4.0.1                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2023-12-07T22:44:57Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[34;1mConfig:
+[0m- scan_dir: /Users/vagrant/git
+- scan_result_submit_url: [REDACTED]
+- scan_result_submit_api_token: *****
+- icon_candidates_url: [REDACTED]
+- verbose_log: false
+- enable_repo_clone: true
+- ssh_rsa_private_key: *****
+- git_http_username: <unset>
+- git_http_password: <unset>
+- repository_url: git@github.com:suicidekillerx/emna.git
+- branch: [REDACTED]
+$ ssh-add "-l"
+ssh_agent_check_result: 1
+running / accessible ssh-agent detected
+$ bash "-c" "/var/folders/xq/sfn_fz953jb36ptp2g68wc2r0000gn/T/spawn3355381969/tmp_spawn.sh"
+spawn ssh-add /Users/vagrant/.ssh/steplib_ssh_step_id_rsa
+Identity added: /Users/vagrant/.ssh/steplib_ssh_step_id_rsa (/Users/vagrant/.ssh/steplib_ssh_step_id_rsa)
+
+[32;1mSuccess
+[0mThe SSH key was saved to /Users/vagrant/.ssh/steplib_ssh_step_id_rsa
+and was successfully added to ssh-agent.
+
+[34;1m$ git "init"
+[0mhint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are '[REDACTED]', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /Users/vagrant/git/.git/
+
+[34;1m$ git "remote" "add" "origin" "git@github.com:suicidekillerx/emna.git"
+[0m
+[34;1m$ git "config" "gc.auto" "0"
+[0m
+[34;1m$ git "fetch" "--jobs=10" "--depth=1" "--no-tags" "origin" "refs/heads/[REDACTED]"
+[0m
